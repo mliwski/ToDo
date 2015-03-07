@@ -7,7 +7,7 @@ An also ... I hate the Gmail® interface for tasks and couldn't find any good To
 
 Roadmap
 -------
- 1. List my tasks in a pure HTML & JS page (readonly)
+ 1. <del>List my tasks in a pure HTML & JS page (trashcode and readonly)</del>
  1. "Gruntify"
  1. List my tasks in AngularJS app (readonly)
  1. Tasks CRUD
