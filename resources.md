@@ -7,3 +7,4 @@ Resources
  * https://developers.google.com/accounts/docs/OAuth2UserAgent#validatetoken
  * https://developers.google.com/api-client-library/javascript/
  * https://developers.google.com/accounts/docs/OpenIDConnect
+ * https://developers.google.com/oauthplayground/
