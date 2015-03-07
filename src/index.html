@@ -1,0 +1,25 @@
+<body>
+	<a href="https://accounts.google.com/o/oauth2/auth?scope=email https://www.googleapis.com/auth/tasks&redirect_uri=http://localhost&response_type=token&client_id=364497781357-mdeekpgeb2bso2acdjs1oe0aa7tep448.apps.googleusercontent.com">Login</a>
+	
+	<script>
+		function querystringToJSON(queryString) {
+			if(queryString){
+				return JSON.parse("{\""+queryString.substring(1,queryString.length).split("&").join("\",\"").replace(/=/g,"\":\"")+"\"}");
+			}
+			return {};
+		}
+	
+		function locationToJSON() {
+			var hash = querystringToJSON(location.hash);
+			var search = querystringToJSON(location.search);
+			
+			return {'hash':hash, 'search':search};
+		}
+	
+		var locationObject = locationToJSON();
+	
+		if(locationObject.hash != undefined && locationObject.hash.access_token!=undefined) {
+			console.log(locationObject.hash);
+		}
+	</script>
+</body>
