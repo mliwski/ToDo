@@ -1,7 +1,10 @@
+Why?
+----
 A project to play with:
  * AngularJS®
  * OAuth 2.0®
- * Client Side only apps
+ * Google APIs
+ * Grunt, Bower, etc
 
 An also ... I hate the Gmail® interface for tasks and couldn't find any good ToDo list that match my needs
 
@@ -15,12 +18,14 @@ Roadmap
  1. Grunt distrib. tasks
  1. First release
  1. Sort with Drag & Drop
- 1. Mobile release
+ 1. Web mobile release
  1. Sugar...
  
 Ideas/To solve
 --------------
- * How to handle sync.
+ * How to handle sync
  * Config page
  * Chrome extension
- * Firefox extensio
+ * Firefox extension
+ * Native App for Android
+ * Native App for Iphone 
