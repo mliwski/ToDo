@@ -18,3 +18,8 @@ Authorization=Bearer Bearer ya29.LQExaZJfR_-H3_jaUep2aVWfqallUlcSRXnujWJoQ_Tfczh
 # Grunt
  * http://gruntjs.com/getting-started
  * http://www.html5rocks.com/en/tutorials/tooling/supercharging-your-gruntfile/
+
+### Livereload for development
+ * https://github.com/gruntjs/grunt-contrib-watch
+ * https://github.com/gruntjs/grunt-contrib-connect
+ * http://stackoverflow.com/questions/20883727/grunt-contrib-connect-with-grunt-contrib-watch-and-chrome-livereload-extension
