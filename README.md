@@ -1,4 +1,5 @@
-# Why?
+# ToDo [![Build Status](https://travis-ci.org/mliwski/ToDo.svg?branch=development)](https://travis-ci.org/mliwski/ToDo)
+## Why?
 A project to play with:
  * AngularJS®
  * OAuth 2.0®
@@ -7,7 +8,7 @@ A project to play with:
 
 An also ... I hate the Gmail® interface for tasks and couldn't find any good ToDo list that match my needs
 
-# Roadmap
+## Roadmap
  1. <del>List my tasks in a pure HTML & JS page (trashcode and readonly)</del>
  1. <del>Grunt + Connect/Livereload to development + etc</del>
  1. List my tasks in AngularJS app + Jazmine (readonly)
@@ -20,7 +21,7 @@ An also ... I hate the Gmail® interface for tasks and couldn't find any good To
  1. Web mobile release
  1. Sugar...
  
-# Ideas/To solve
+## Ideas/To solve
  * How to handle sync
  * Config page
  * Chrome extension
@@ -28,7 +29,7 @@ An also ... I hate the Gmail® interface for tasks and couldn't find any good To
  * Native App for Android
  * Native App for Iphone 
  
-# Quick start
+## Quick start
 1. Be sure you have installed latest [nodejs](https://nodejs.org/), [npm](https://www.npmjs.com/) and [grunt-cli](http://gruntjs.com/getting-started) versions
 2. Clone this repo
 2. Create a Google Project to play with, following this instructions: [Google project creation](./docs/google_project_creation.md)
