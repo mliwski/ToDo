@@ -64,7 +64,7 @@ Karma is a JavaScript command line tool that can be used to spawn a web server w
  * https://github.com/karma-runner/grunt-karma
  * http://karma-runner.github.io/0.12/plus/travis.html
 
-## Jasmin
+## Jasmine
 Jasmine is a behavior-driven development framework for testing JavaScript code. It does not depend on any other JavaScript frameworks. It does not require a DOM.
 
 **Resources**
