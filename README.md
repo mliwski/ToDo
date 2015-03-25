@@ -1,4 +1,4 @@
-# ToDo [![Build Status](https://travis-ci.org/mliwski/ToDo.svg?branch=development)](https://travis-ci.org/mliwski/ToDo)
+# ToDo [![Build Status](https://travis-ci.org/mliwski/ToDo.svg?branch=development)](https://travis-ci.org/mliwski/ToDo) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 ## Why?
 A project to play with:
  * AngularJS®
