@@ -49,6 +49,7 @@ AngularJS is a **structural framework for dynamic web apps**. It lets you use HT
  * https://github.com/toddmotto/angularjs-styleguide
  * https://scotch.io/tutorials/declaring-angularjs-modules-for-minification
  * https://github.com/johnpapa/angular-styleguide
+ * https://docs.google.com/document/d/1XXMvReO8-Awi1EZXAXS4PzDzdNvV6pGcuaF4Q9821Es/pub
  * Testing: http://www.yearofmoo.com/2013/01/full-spectrum-testing-with-angularjs-and-karma.html
 
 ## Karma
