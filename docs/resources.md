@@ -53,7 +53,7 @@ AngularJS is a **structural framework for dynamic web apps**. It lets you use HT
  * Testing: http://www.yearofmoo.com/2013/01/full-spectrum-testing-with-angularjs-and-karma.html
 
 ## Karma
-Karma is a JavaScript command line tool that can be used to spawn a web server which loads your application's source code and executes your tests. You can configure Karma to run against a number of browsers, which is useful for being confident that your application works on all browsers you need to support. Karma is executed on the command line and will display the results of your tests on the command line once they have run in the browser.
+Karma js is a test runner. It runs your tests. Basically, you writing your tests using your favorite testing framework (mocha, jasmine, qunit etc.) and use karma js to run it in several browsers.
 
 **Resources**
  * http://karma-runner.github.io/0.12/index.html
@@ -64,6 +64,7 @@ Karma is a JavaScript command line tool that can be used to spawn a web server w
  * https://github.com/karma-runner/karma-ie-launcher
  * https://github.com/karma-runner/grunt-karma
  * http://karma-runner.github.io/0.12/plus/travis.html
+ * http://ymichael.com/2014/05/10/javascript-testing-with-karma-js.html
 
 ## Jasmine
 Jasmine is a behavior-driven development framework for testing JavaScript code. It does not depend on any other JavaScript frameworks. It does not require a DOM.
