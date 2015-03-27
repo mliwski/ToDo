@@ -10,6 +10,7 @@ In this space will put all "technologies" (things/frameworks/apps/languages/stat
  * http://www.hostingadvice.com/blog/where-to-find-free-node-js-hosting/
  * http://karma-runner.github.io/0.8/config/coverage.html
  * https://github.com/yahoo/istanbul
+ * https://github.com/yeoman/insight
 
 ## Just interesting
  * http://radian.io/

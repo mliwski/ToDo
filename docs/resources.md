@@ -52,6 +52,9 @@ AngularJS is a **structural framework for dynamic web apps**. It lets you use HT
  * https://docs.google.com/document/d/1XXMvReO8-Awi1EZXAXS4PzDzdNvV6pGcuaF4Q9821Es/pub
  * Testing: http://www.yearofmoo.com/2013/01/full-spectrum-testing-with-angularjs-and-karma.html
 
+**Modules**
+ * Authentication: https://github.com/witoldsz/angular-http-auth
+
 ## Karma
 Karma js is a test runner. It runs your tests. Basically, you writing your tests using your favorite testing framework (mocha, jasmine, qunit etc.) and use karma js to run it in several browsers.
 

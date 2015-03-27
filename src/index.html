@@ -1,71 +1,15 @@
+<!doctype html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="utf-8">
+    <title>My HTML File</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/app.css">
+    <script src="bower_components/angular/angular.js"></script>
+</head>
 <body>
-	<p>
-		<h3>Login</h3>
-		<a id="login_link" href="https://accounts.google.com/o/oauth2/auth?scope=email https://www.googleapis.com/auth/tasks&redirect_uri=http://localhost&response_type=token&client_id===%%CLIENT_ID%%==">Login</a>
-	</p>
-	<p>
-		<h3>API verification</h3>
-		<div id="verification_status">Unknown</div>
-	</p>
-	<p>
-		<h3>Lista de tareas</h3>
-		<div id="lists">Unknown</div>
-	</p>
-	
-	
-	<script>
-		var client_id="==%%CLIENT_ID%%==";
-		var verification_status="API Account Not Verified";
-		
-		function querystringToJSON(queryString) {
-			if(queryString){
-				return JSON.parse("{\""+queryString.substring(1,queryString.length).split("&").join("\",\"").replace(/=/g,"\":\"")+"\"}");
-			}
-			return {};
-		}
-	
-		function locationToJSON() {
-			var hash = querystringToJSON(location.hash);
-			var search = querystringToJSON(location.search);
-			
-			return {'hash':hash, 'search':search};
-		}
-	
-		var locationObject = locationToJSON();
-	
-		if(locationObject.hash != undefined && locationObject.hash.access_token!=undefined) {
-			document.getElementById("login_link").innerHTML="Logged In";
-			
-			function verifyClientId() {
-				if (xmlhttp.readyState==4 && xmlhttp.status==200 && client_id==JSON.parse(xmlhttp.response).issued_to) {
-					verification_status="API Account Verified";
-					document.getElementById("verification_status").innerHTML=verification_status;
-					
-					function logLists() {
-						if (xmlhttp.readyState==4 && xmlhttp.status==200) {
-							var lists = JSON.parse(xmlhttp.response);
-							var listsTitles = lists.items.map( function(list) {
-									return list.title;
-								}).join(", ");
-							document.getElementById("lists").innerHTML=listsTitles;
-						}
-					}
-					
-					xmlhttp.open("GET","https://www.googleapis.com/tasks/v1/users/@me/lists",true);
-					xmlhttp.setRequestHeader("Authorization", locationObject.hash.token_type + " " + locationObject.hash.access_token);
-					xmlhttp.onreadystatechange=logLists;
-					xmlhttp.send();
-					
-				}
-			}
-			
-			var xmlhttp=new XMLHttpRequest();
-			xmlhttp.open("GET","https://www.googleapis.com/oauth2/v1/tokeninfo?access_token="+locationObject.hash.access_token,true);
-			xmlhttp.onreadystatechange=verifyClientId;
-			xmlhttp.send();
-			
-			
-			
-		}
-	</script>
+
+<p>Nothing here {{'yet' + '!'}}</p>
+
 </body>
+</html>
