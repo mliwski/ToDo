@@ -18,6 +18,7 @@ In this app it's only used to run npm, grunt tasks, bower and livereload.
 npm is a **package manager** for JS. (Requires nodejs >= v0.8)
 * https://www.npmjs.com/
 * It´s configured by [package.json](https://docs.npmjs.com/files/package.json)
+* Check how scripts is handled by npm at https://docs.npmjs.com/misc/scripts
 
 ## Grunt
 Grunt is a **tasks runner** writen in JS, it could be used for *Automation, performing repetitive tasks like minification, compilation, unit testing and linting* (Requires nodejs >= v0.8)

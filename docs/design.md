@@ -17,7 +17,7 @@ Features:
  * CRUD
  * Synchronise
 
-![actions](./actions on task list.png "Actions on task lists")
+![actions](./images/actions on task list.png "Actions on task lists")
 
 
 ** Tasks **

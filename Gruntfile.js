@@ -5,23 +5,9 @@ module.exports = function(grunt) {
 
     // Project configuration.
     grunt.initConfig({
-		replace: {
-            dist: {
-                src: ['src/index.html'],
-                dest: 'build/index.html',
-                replacements: [{
-                    from: '==%%CLIENT_ID%%==',
-                    to: config.clientId
-                }]
-            },
-			dev: {
-                src: ['src/index.html'],
-                dest: 'tmp/index.html',
-                replacements: [{
-                    from: '==%%CLIENT_ID%%==',
-                    to: config.clientId
-                }]
-            }
+        copy: {
+            dist : { nonull: true, expand: true, cwd: "src", src: ['**/**'], dest: 'dist/', timestamp: true},
+            dev : { nonull: true, expand: true, cwd: "src", src: ['**/**'], dest: 'tmp/', timestamp: true}
         },
 		connect: {
             server: {
@@ -32,17 +18,17 @@ module.exports = function(grunt) {
                     keepalive: false,
                     livereload: true,
 					open: true,
-					debug: false,
+					debug: false
                 }
             }
         },
         watch: {
 			html: {
-				files: ['src/*.html'],
-				tasks: ['replace'],
+				files: ['src/**/*.html'],
+				tasks: ['copy:dev'],
 				options: {
-					livereload: true,
-				},
+					livereload: true
+				}
 			}
         }
     });
@@ -62,6 +48,7 @@ module.exports = function(grunt) {
 	});
 
     grunt.loadNpmTasks('grunt-text-replace');
+    grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
@@ -69,6 +56,6 @@ module.exports = function(grunt) {
     grunt.registerTask('default', ['help']);
 	grunt.registerTask('help', ['project_banner_task', 'help_task']);
 	
-	grunt.registerTask('dist', ['project_banner_task', 'replace:dist']);
-	grunt.registerTask('dev', ['project_banner_task', 'replace:dev', 'connect', 'watch']);
+	grunt.registerTask('dist', ['project_banner_task', 'copy:dist']);
+	grunt.registerTask('dev', ['project_banner_task', 'copy:dev', 'connect', 'watch']);
 };
