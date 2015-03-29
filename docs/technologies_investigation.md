@@ -11,6 +11,7 @@ In this space will put all "technologies" (things/frameworks/apps/languages/stat
  * http://karma-runner.github.io/0.8/config/coverage.html
  * https://github.com/yahoo/istanbul
  * https://github.com/yeoman/insight
+ * http://theholmesoffice.com/node-js-fundamentals-how-to-upgrade-the-node-js-version/
 
 ## Just interesting
  * http://radian.io/

@@ -1,13 +1,18 @@
 <!doctype html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="ToDoApp">
 <head>
     <meta charset="utf-8">
     <title>To do list (google tasks based)</title>
     <script src="libs/bower_components/angular/angular.js"></script>
+	<script src="lists/listsController.js"></script>
 </head>
 <body ng-cloak>
 
-<p>Nothing here {{'yet' + '!' + 'replace working'}}</p>
+<div ng-controller="ToDoListsController">
+	<ul>
+		<li ng-repeat="list in todoLists">{{list.name}} </li>
+	</ul>
+</div>
 
 </body>
 </html>
