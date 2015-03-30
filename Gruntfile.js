@@ -24,12 +24,17 @@ module.exports = function(grunt) {
         },
         watch: {
 			html: {
-				files: ['src/**/*.html','src/**/*.js'],
-				tasks: ['copy:dev'],
+				files: ['src/**/*.html', 'src/**/*.js', 'test/**/*.js'],
+				tasks: ['compile'],
 				options: {
 					livereload: true
 				}
 			}
+        },
+        karma: {
+            unit: {
+                configFile: 'test/karma.conf.js'
+            }
         }
     });
 	
@@ -43,19 +48,22 @@ module.exports = function(grunt) {
 	grunt.registerTask('help_task', 'print help options', function() {
 		grunt.log.writeln(" Grunt commands:");
 		grunt.log.writeln(" * help : Print this options");
-		grunt.log.writeln(" * dist : Build distributable files");
-		grunt.log.writeln(" * dev : Build dev on tmp folder and startup a dev server");
+		grunt.log.writeln(" * dist : Run tests and build distributable files");
+        grunt.log.writeln(" * compile : Run tests and then build dev on tmp folder");
+		grunt.log.writeln(" * dev : Compile and startup a dev server");
 	});
 
-    grunt.loadNpmTasks('grunt-text-replace');
     grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-karma');
 
     // Default task(s).
     grunt.registerTask('default', ['help']);
 	grunt.registerTask('help', ['project_banner_task', 'help_task']);
 	
-	grunt.registerTask('dist', ['project_banner_task', 'copy:dist']);
-	grunt.registerTask('dev', ['project_banner_task', 'copy:dev', 'connect', 'watch']);
+    grunt.registerTask('compile', ['karma:unit', 'copy:dev']);
+	grunt.registerTask('dev', ['project_banner_task', 'compile', 'connect', 'watch']);
+
+    grunt.registerTask('dist', ['project_banner_task', 'karma:unit', 'copy:dist']);
 };

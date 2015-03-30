@@ -5,9 +5,9 @@
 var todoApp = angular.module('ToDoApp', []);
 
 todoApp.controller('ToDoListsController', function($scope) {
-  $scope.todoLists = [
-    {'name': '20%'},
-    {'name': 'X'},
-    {'name': 'Y'}
-  ];
+    $scope.todoLists = [
+        {'name': '20%'},
+        {'name': 'X'},
+        {'name': 'Y'}
+    ];
 });
