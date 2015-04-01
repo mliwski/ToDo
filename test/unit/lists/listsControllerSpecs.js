@@ -3,17 +3,17 @@
 // Mocked Service
 angular.module('listServiceModuleMock', []).
     factory('listServiceMock', function($q) {
-return {
-        get : function() {
-            console.log("Mocked get")
-            var mockUser = [
-                {'name': 'X'},
-                {'name': 'Y'}
-            ];
-            return $q.when(mockUser);
-
-
-        }}}
+        return {
+            get : function() {
+                console.log("Mocked get")
+                var mockUser = [
+                    {'name': 'X'},
+                    {'name': 'Y'}
+                ];
+                return $q.when(mockUser,function(){ console.log("Llamo al callback"); return mockUser},
+                    function(){ console.log("Llamo al callback"); return mockUser},
+                    function(){ console.log("Llamo al callback"); return mockUser});
+            }}}
 );
 
 /* jasmine specs for lists controllers go here */

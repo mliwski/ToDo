@@ -71,9 +71,13 @@ Karma js is a test runner. It runs your tests. Basically, you writing your tests
  * https://github.com/karma-runner/grunt-karma
  * http://karma-runner.github.io/0.12/plus/travis.html
  * http://ymichael.com/2014/05/10/javascript-testing-with-karma-js.html
+ * Karma+Webstorm: http://blog.jetbrains.com/webstorm/2013/10/running-javascript-tests-with-karma-in-webstorm-7/
+ * Webstorm IDE Plugin for Chrome: https://chrome.google.com/webstore/detail/jetbrains-ide-support/hmhgeddbohgjknpmjagkdomcpobmllji
 
 **What I learned**
  * If you use karma + jasmine to unit test your AngularJS (i.e. controllers) you need to add angular-mocks or it wouldn't find modules function.
+ * Use [Webstorm](https://www.jetbrains.com/webstorm/) as your IDE
+ * If use your webstorm as your IDE, use it as an IDE not just as a text-editor with sugar ... debug and run from It (thanks [lukebell](https://github.com/lukebell) ;))
 
 ## Jasmine
 Jasmine is a behavior-driven development framework for testing JavaScript code. It does not depend on any other JavaScript frameworks. It does not require a DOM.
