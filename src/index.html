@@ -1,16 +1,17 @@
 <!doctype html>
-<html lang="en" ng-app="ToDoApp">
+<html lang="en" ng-app="todoApp">
 <head>
     <meta charset="utf-8">
-    <title>To do list (google tasks based)</title>
+    <title ng-bind-template="ToDo list {{pageName}}">ToDo list (google tasks based)</title>
     <script src="libs/bower_components/angular/angular.js"></script>
-	<script src="lists/listsController.js"></script>
+	<script src="list/listController.js"></script>
+    <script src="list/listService.js"></script>
 </head>
 <body ng-cloak>
 
-<div ng-controller="ToDoListsController">
+<div ng-controller="ListController">
 	<ul>
-		<li ng-repeat="list in todoLists">{{list.name}} </li>
+		<li ng-repeat="list in lists">{{list.name}} </li>
 	</ul>
 </div>
 

@@ -52,6 +52,8 @@ AngularJS is a **structural framework for dynamic web apps**. It lets you use HT
  * https://github.com/johnpapa/angular-styleguide
  * https://docs.google.com/document/d/1XXMvReO8-Awi1EZXAXS4PzDzdNvV6pGcuaF4Q9821Es/pub
  * Testing: http://www.yearofmoo.com/2013/01/full-spectrum-testing-with-angularjs-and-karma.html
+ * Service vs Factory: https://www.airpair.com/angularjs/posts/top-10-mistakes-angularjs-developers-make, http://blog.manishchhabra.com/2013/09/angularjs-service-vs-factory-with-example/, http://stackoverflow.com/questions/15666048/service-vs-provider-vs-factory
+ * Batarang extension: https://chrome.google.com/webstore/detail/angularjs-batarang/ighdmehidhipcmcojjgiloacoafjmpfk?hl=en
 
 **Modules**
  * Authentication: https://github.com/witoldsz/angular-http-auth
@@ -69,6 +71,9 @@ Karma js is a test runner. It runs your tests. Basically, you writing your tests
  * https://github.com/karma-runner/grunt-karma
  * http://karma-runner.github.io/0.12/plus/travis.html
  * http://ymichael.com/2014/05/10/javascript-testing-with-karma-js.html
+
+**What I learned**
+ * If you use karma + jasmine to unit test your AngularJS (i.e. controllers) you need to add angular-mocks or it wouldn't find modules function.
 
 ## Jasmine
 Jasmine is a behavior-driven development framework for testing JavaScript code. It does not depend on any other JavaScript frameworks. It does not require a DOM.

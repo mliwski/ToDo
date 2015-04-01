@@ -4,7 +4,7 @@ module.exports = function (config) {
         files: [
             'src/libs/bower_components/angular/angular.js',
             'src/libs/bower_components/angular-mocks/angular-mocks.js',
-            'src/lists/*.js',
+            'src/list/*.js',
             'test/unit/**/*.js'
         ],
 

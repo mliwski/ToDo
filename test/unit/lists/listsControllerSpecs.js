@@ -1,15 +1,34 @@
 'use strict';
 
+// Mocked Service
+angular.module('listServiceModuleMock', []).
+    factory('listServiceMock', function($q) {
+return {
+        get : function() {
+            console.log("Mocked get")
+            var mockUser = [
+                {'name': 'X'},
+                {'name': 'Y'}
+            ];
+            return $q.when(mockUser);
+
+
+        }}}
+);
+
 /* jasmine specs for lists controllers go here */
-describe('ToDo Lists Controller', function() {
+describe('List Controller', function() {
 
-    beforeEach(module('ToDoApp'));
+    beforeEach(module('todoApp'));
+    beforeEach(module('listServiceModuleMock'));
 
-    it('should create "phones" model with 3 phones', inject(function($controller) {
-        var scope = {},
-            ctrl = $controller('ToDoListsController', {$scope:scope});
 
-        expect(scope.todoLists.length).toBe(3);
+
+    it('should create 3 list', inject(function($controller,_listServiceMock_) {
+        var scope = {};
+        var ctrl = $controller('ListController', {$scope:scope, 'List':_listServiceMock_});
+
+        expect(scope.lists.length).toBe(2);
     }));
 
 });
