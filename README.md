@@ -36,3 +36,6 @@ An also ... I hate the Gmail® interface for tasks and couldn't find any good To
 3. run `npm install`
 4. run `grunt dev`
 5. Enjoy!
+
+## Docs
+If you want to check the sources used on "investigation", where I found solution to my problems (on the scope of this project), etc... plese check the [docs](./docs) 

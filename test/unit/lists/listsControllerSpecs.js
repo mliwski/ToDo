@@ -1,18 +1,14 @@
 'use strict';
 
 // Mocked Service
-angular.module('listServiceModuleMock', []).
-    factory('listServiceMock', function($q) {
+angular.module('listMockServiceModule', []).
+    factory('listMockService', function($q) {
         return {
             get : function() {
-                console.log("Mocked get")
-                var mockUser = [
+                return $q.when([
                     {'name': 'X'},
                     {'name': 'Y'}
-                ];
-                return $q.when(mockUser,function(){ console.log("Llamo al callback"); return mockUser},
-                    function(){ console.log("Llamo al callback"); return mockUser},
-                    function(){ console.log("Llamo al callback"); return mockUser});
+                ]);
             }}}
 );
 
@@ -21,19 +17,20 @@ describe('List Controller', function() {
 	var scope = {};
 	
     beforeEach(module('todoApp'));
-    beforeEach(module('listServiceModuleMock'));
+    beforeEach(module('listMockServiceModule'));
 	beforeEach(inject(function ($compile, $rootScope) {
         scope = $rootScope.$new();
     }));
 
+    it('Should startup lists with empty set', inject(function($controller,_listMockService_) {
+        var ctrl = $controller('ListController', {$scope:scope, 'List':_listMockService_});
 
+        expect(scope.lists.length).toBe(0);
+    }));
 
-
-    it('should create 3 list', inject(function($controller,_listServiceMock_,$rootScope) {
-        var ctrl = $controller('ListController', {$scope:scope, 'List':_listServiceMock_});
-
-		scope.$digest();
-		
+    it('Should bind 2 lists from service to scope', inject(function($controller,_listMockService_) {
+        var ctrl = $controller('ListController', {$scope:scope, 'List':_listMockService_});
+        scope.$digest();
         expect(scope.lists.length).toBe(2);
     }));
 

@@ -78,6 +78,11 @@ Karma js is a test runner. It runs your tests. Basically, you writing your tests
  * If you use karma + jasmine to unit test your AngularJS (i.e. controllers) you need to add angular-mocks or it wouldn't find modules function.
  * Use [Webstorm](https://www.jetbrains.com/webstorm/) as your IDE
  * If use your webstorm as your IDE, use it as an IDE not just as a text-editor with sugar ... debug and run from It (thanks [lukebell](https://github.com/lukebell) ;))
+ * On unit test that need promises mock you have to $digest() your scope. Check the following links to know why:
+    * [AngularJS - Scope.digest docs](https://docs.angularjs.org/api/ng/type/$rootScope.Scope#$digest)
+    * [AngularJS - $q docs](https://docs.angularjs.org/api/ng/service/$q) (search testing paragraph & method when())
+    * [Community info - Testing Promises in AngularJS](http://blog.xebia.com/2013/10/12/testing-promises-in-angularjs/)
+    * [Community info - mocking services](http://stackoverflow.com/questions/23705051/how-do-i-mock-a-service-that-returns-promise-in-angularjs-jasmine-unit-test) I found here the idea to use $q.when
 
 ## Jasmine
 Jasmine is a behavior-driven development framework for testing JavaScript code. It does not depend on any other JavaScript frameworks. It does not require a DOM.
