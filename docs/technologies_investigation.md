@@ -14,6 +14,7 @@ In this space will put all "technologies" (things/frameworks/apps/languages/stat
  * https://github.com/yahoo/istanbul
  * https://github.com/yeoman/insight
  * http://theholmesoffice.com/node-js-fundamentals-how-to-upgrade-the-node-js-version/
+ * http://shields.io/
 
 ## Just interesting
  * http://radian.io/
