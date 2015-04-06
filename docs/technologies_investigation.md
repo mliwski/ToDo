@@ -3,6 +3,8 @@ In this space will put all "technologies" (things/frameworks/apps/languages/stat
 
 ## Next to research
  * https://www.youtube.com/watch?v=uD6Okha_Yj0
+ * http://ngmodules.org/modules/ngStorage
+ * http://ngmodules.org/modules/http-auth-interceptor
  * https://www.npmjs.com/package/grunt-bump
  * https://github.com/stephenplusplus/grunt-wiredep
  * https://github.com/sapegin/grunt-bower-concat
