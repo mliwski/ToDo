@@ -1,37 +1,25 @@
 'use strict';
 
-// Mocked Service
-angular.module('listMockServiceModule', []).
-    factory('listMockService', function($q) {
-        return {
-            get : function() {
-                return $q.when([
-                    {'name': 'X'},
-                    {'name': 'Y'}
-                ]);
-            }}}
-);
-
 /* jasmine specs for lists controllers go here */
 describe('List Controller', function() {
 	var scope = {};
-	
+    var listServiceMock = {get:function(){}};
+
     beforeEach(module('todoApp'));
-    beforeEach(module('listMockServiceModule'));
-	beforeEach(inject(function ($compile, $rootScope) {
+	beforeEach(inject(function ($compile, $rootScope, $q) {
         scope = $rootScope.$new();
+        spyOn(listServiceMock, "get").and.returnValue($q.when([{'name': 'X'},{'name': 'Y'}]));
     }));
 
-    it('Should startup lists with empty set', inject(function($controller,_listMockService_) {
-        var ctrl = $controller('ListController', {$scope:scope, 'List':_listMockService_});
+    it('Should startup lists with empty set', inject(function($controller) {
+        var ctrl = $controller('ListController', {$scope:scope});
 
         expect(scope.lists.length).toBe(0);
     }));
 
-    it('Should bind 2 lists from service to scope', inject(function($controller,_listMockService_) {
-        var ctrl = $controller('ListController', {$scope:scope, 'List':_listMockService_});
+    it('Should bind 2 lists from service to scope', inject(function($controller) {
+        var ctrl = $controller('ListController', {$scope:scope, List: listServiceMock});
         scope.$digest();
         expect(scope.lists.length).toBe(2);
     }));
-
 });
