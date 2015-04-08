@@ -3,17 +3,22 @@
 <head>
     <meta charset="utf-8">
     <title ng-bind-template="ToDo list {{pageName}}">ToDo list (google tasks based)</title>
-    <script src="libs/bower_components/angular/angular.js"></script>
-	<script src="list/listController.js"></script>
-    <script src="list/listService.js"></script>
 </head>
 <body ng-cloak>
-
+<div>
+    <h3>Login</h3>
+    <a id="login_link" href="https://accounts.google.com/o/oauth2/auth?scope=email https://www.googleapis.com/auth/tasks&redirect_uri=http://localhost&response_type=token&client_id={{config.clientId}}">Login</a>
+</div>
 <div ng-controller="ListController">
-	<ul>
-		<li ng-repeat="list in lists">{{list.name}} </li>
-	</ul>
+    <ul>
+        <li ng-repeat="list in lists">{{list.name}} </li>
+    </ul>
 </div>
 
+<script src="libs/bower_components/angular/angular.js"></script>
+<script src="libs/bower_components/angular-route/angular-route.js"></script>
+<script src="app.js"></script>
+<script src="components/list/listController.js"></script>
+<script src="components/list/listService.js"></script>
 </body>
 </html>

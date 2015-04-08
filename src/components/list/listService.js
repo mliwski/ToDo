@@ -1,8 +1,8 @@
-var listService = angular.module('listService', []);
+var listService = angular.module('ListService', []);
 
 listService.factory('List', ['$timeout',function($timeout){
     return {
-        get: function(){
+        get: function(token){
             return $timeout(function(){
                 return [
                     {'name': '20%'},
