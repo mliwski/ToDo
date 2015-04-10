@@ -5,9 +5,10 @@
     <title ng-bind-template="ToDo list {{pageName}}">ToDo list (google tasks based)</title>
 </head>
 <body ng-cloak>
-<div>
+<div ng-controller="AuthenticationController">
     <h3>Login</h3>
-    <a id="login_link" href="https://accounts.google.com/o/oauth2/auth?scope=email https://www.googleapis.com/auth/tasks&redirect_uri=http://localhost&response_type=token&client_id={{config.clientId}}">Login</a>
+    <a id="login_link" ng-href="{{authenticationLink}}">Login</a>
+    <a id="logout_link" href="" ng-click="logout();">Logout</a>
 </div>
 <div ng-controller="ListController">
     <ul>
@@ -17,8 +18,20 @@
 
 <script src="libs/bower_components/angular/angular.js"></script>
 <script src="libs/bower_components/angular-route/angular-route.js"></script>
+<script src="libs/bower_components/angular-http-auth/src/http-auth-interceptor.js"></script>
+<script src="libs/bower_components/ngstorage/ngStorage.js"></script>
+
+<script src="libs/utils/utils.js"></script>
+
 <script src="app.js"></script>
+
+<script src="components/list/listModule.js"></script>
 <script src="components/list/listController.js"></script>
 <script src="components/list/listService.js"></script>
+
+<script src="components/authentication/authenticationModule.js"></script>
+<script src="components/authentication/authenticationController.js"></script>
+<script src="components/authentication/authenticationService.js"></script>
+
 </body>
 </html>

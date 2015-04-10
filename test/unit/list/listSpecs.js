@@ -5,7 +5,9 @@ describe('List Controller', function() {
 	var scope = {};
     var listServiceMock = {get:function(){}};
 
-    beforeEach(module('todoApp'));
+    beforeEach(module('listModule'));
+    //beforeEach(module('todoApp'));
+
 	beforeEach(inject(function ($compile, $rootScope, $q) {
         scope = $rootScope.$new();
         spyOn(listServiceMock, "get").and.returnValue($q.when([{'name': 'X'},{'name': 'Y'}]));

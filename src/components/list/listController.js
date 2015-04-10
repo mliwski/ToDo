@@ -2,7 +2,7 @@
 
 /* ToDo List Controller */
 
-angular.module('todoApp')
+angular.module('listModule')
     .controller('ListController', ['$scope','List', function($scope, List) {
         $scope.lists = [];
 
