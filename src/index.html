@@ -4,15 +4,16 @@
     <meta charset="utf-8">
     <title ng-bind-template="ToDo list {{pageName}}">ToDo list (google tasks based)</title>
 </head>
-<body ng-cloak>
-<div ng-controller="AuthenticationController">
+<body>
+<div id="authentication_block" ng-controller="AuthenticationController" ng-cloak>
     <h3>Login</h3>
-    <a id="login_link" ng-href="{{authenticationLink}}">Login</a>
-    <a id="logout_link" href="" ng-click="logout();">Logout</a>
+    <a id="login_link" ng-href="{{authenticationLink}}" ng-show="loggedIn == false">Login</a>
+    <a id="logout_link" href="" ng-click="logout();" ng-show="loggedIn == true">Logout</a>
 </div>
-<div ng-controller="ListController">
+<div id="list_block" ng-controller="ListController" ng-show="loggedIn == true" ng-cloak>
+    <h3>Tasks</h3>
     <ul>
-        <li ng-repeat="list in lists">{{list.name}} </li>
+        <li ng-repeat="list in lists">{{list.title}} </li>
     </ul>
 </div>
 

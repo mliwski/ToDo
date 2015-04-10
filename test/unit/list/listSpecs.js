@@ -5,8 +5,7 @@ describe('List Controller', function() {
 	var scope = {};
     var listServiceMock = {get:function(){}};
 
-    beforeEach(module('listModule'));
-    //beforeEach(module('todoApp'));
+    beforeEach(module('todoApp'));
 
 	beforeEach(inject(function ($compile, $rootScope, $q) {
         scope = $rootScope.$new();

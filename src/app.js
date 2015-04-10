@@ -1,5 +1,5 @@
 'use strict';
-
+//TODO: Make config load from another file not declared here
 // Declare app level module which depends on views, and components
 angular.module('todoApp', ['ngRoute' , 'ngTodoUtils', 'ngStorage', 'listModule', 'authenticationModule'])
     .constant('config',
