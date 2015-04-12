@@ -1,12 +1,13 @@
-'use strict';
+(function() {
+    'use strict';
 
-/* ToDo List Controller */
+    /* List Controllers */
+    angular.module('listModule')
+        .controller('ListController', ['$scope', 'List', function ($scope, List) {
+            $scope.lists = [];
 
-angular.module('listModule')
-    .controller('ListController', ['$scope','List', function($scope, List) {
-        $scope.lists = [];
-
-        List.get().then(function(lists){
-            $scope.lists = lists;
-        });
-    }]);
+            List.get().then(function (lists) {
+                $scope.lists = lists;
+            });
+        }]);
+})();

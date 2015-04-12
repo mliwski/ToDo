@@ -1,4 +1,6 @@
-'use strict';
+(function() {
+    'use strict';
 
-// Declare list module
-angular.module('listModule', ['authenticationModule']);
+    /* List Module */
+    angular.module('listModule', ['authenticationModule']);
+})();

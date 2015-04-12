@@ -57,7 +57,8 @@ AngularJS is a **structural framework for dynamic web apps**. It lets you use HT
  * Batarang extension: https://chrome.google.com/webstore/detail/angularjs-batarang/ighdmehidhipcmcojjgiloacoafjmpfk?hl=en
 
 **Modules**
- * Authentication: https://github.com/witoldsz/angular-http-auth
+ * [Authentication](https://github.com/witoldsz/angular-http-auth)
+ * [HTML5 Local storage](http://ngmodules.org/modules/ngStorage)
 
 ## Karma
 Karma js is a test runner. It runs your tests. Basically, you writing your tests using your favorite testing framework (mocha, jasmine, qunit etc.) and use karma js to run it in several browsers.
@@ -92,3 +93,12 @@ Jasmine is a behavior-driven development framework for testing JavaScript code. 
 **Resources**
  * http://jasmine.github.io/
  * https://github.com/jasmine/jasmine
+
+## JSHint
+JSHint is a community-driven tool to detect errors and potential problems in JavaScript code and to enforce your team's coding conventions.
+
+**Resources**
+ * [JSHint Homepage](http://jshint.com/)
+ * [JSHint - List of options](http://jshint.com/docs/options/)
+ * [Grunt - JSHint grunt task](https://github.com/gruntjs/grunt-contrib-jshint)
+ * [Mozilla MDN - Strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode)

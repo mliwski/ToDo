@@ -1,9 +1,10 @@
-/* Based on http://www.developerdrive.com/2013/08/turning-the-querystring-into-a-json-object-using-javascript/ */
-'use strict';
-
 (function() {
+    'use strict';
+
     angular.module('ngTodoUtils', [])
         .service('ParseService', [ function(){
+            /* Based on http://www.developerdrive.com/2013/08/turning-the-querystring-into-a-json-object-using-javascript/ */
+
             this.pathToJson = function (path) {
                 var toSlice = path.indexOf('/') == 0 ? 1 : 0;
                 var pairs = path.slice(toSlice).split('&');
