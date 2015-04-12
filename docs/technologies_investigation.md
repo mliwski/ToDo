@@ -10,7 +10,7 @@ In this space will put all "technologies" (things/frameworks/apps/languages/stat
  * https://saucelabs.com/opensauce/
  * http://www.hostingadvice.com/blog/where-to-find-free-node-js-hosting/
  * http://karma-runner.github.io/0.8/config/coverage.html
- * https://github.com/yahoo/istanbul
+ * https://github.com/gotwarlost/istanbul
  * https://github.com/yeoman/insight
  * http://theholmesoffice.com/node-js-fundamentals-how-to-upgrade-the-node-js-version/
  * http://shields.io/

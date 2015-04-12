@@ -89,8 +89,8 @@ module.exports = function(grunt) {
     grunt.registerTask('default', ['help']);
     grunt.registerTask('help', ['project_banner_task', 'help_task']);
 
-    grunt.registerTask('compile', ['jshint', 'karma:unit', 'copy:dev']);
-    grunt.registerTask('dev', ['project_banner_task', 'compile', 'connect', 'watch']);
+    grunt.registerTask('compile', ['jshint', 'karma:unit']);
+    grunt.registerTask('dev', ['project_banner_task', 'compile', 'copy:dev', 'connect', 'watch']);
 
-    grunt.registerTask('dist', ['project_banner_task', 'karma:unit', 'copy:dist']);
+    grunt.registerTask('dist', ['project_banner_task', 'compile', 'copy:dist']);
 };

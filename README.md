@@ -11,8 +11,8 @@ An also ... I hate the Gmail® interface for tasks and couldn't find any good To
 ## Roadmap
  1. <del>List my tasks in a pure HTML & JS page (trashcode and readonly)</del>
  1. <del>Grunt + Connect/Livereload to development + etc</del>
- 1. List my tasks in AngularJS app (Same as point 1) + Jasmine + Bower
- 1. Protactor + JSHint
+ 1. List my tasks in AngularJS app (Same as point 1) + Jasmine + Bower + JSHint
+ 1. Protactor
  1. Tasks Basic CRUD
  1. [ToDoMVC](http://todomvc.com/) look & feel
  1. Grunt distrib. tasks
