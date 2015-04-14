@@ -73,8 +73,6 @@ Karma js is a test runner. It runs your tests. Basically, you writing your tests
  * https://github.com/karma-runner/grunt-karma
  * http://karma-runner.github.io/0.12/plus/travis.html
  * http://ymichael.com/2014/05/10/javascript-testing-with-karma-js.html
- * Karma+Webstorm: http://blog.jetbrains.com/webstorm/2013/10/running-javascript-tests-with-karma-in-webstorm-7/
- * Webstorm IDE Plugin for Chrome: https://chrome.google.com/webstore/detail/jetbrains-ide-support/hmhgeddbohgjknpmjagkdomcpobmllji
 
 **What I learned**
  * If you use karma + jasmine to unit test your AngularJS (i.e. controllers) you need to add angular-mocks or it wouldn't find modules function.
@@ -102,3 +100,16 @@ JSHint is a community-driven tool to detect errors and potential problems in Jav
  * [JSHint - List of options](http://jshint.com/docs/options/)
  * [Grunt - JSHint grunt task](https://github.com/gruntjs/grunt-contrib-jshint)
  * [Mozilla MDN - Strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode)
+
+## Webstorm
+WebStorm is a lightweight yet powerful IDE. In my opinion ideal to work with Angular.
+
+**Resources**
+ * [Jetbrains - Karma+Webstorm](http://blog.jetbrains.com/webstorm/2013/10/running-javascript-tests-with-karma-in-webstorm-7)
+ * [Jetbrains - Webstorm IDE Plugin for Chrome](https://chrome.google.com/webstore/detail/jetbrains-ide-support/hmhgeddbohgjknpmjagkdomcpobmllji)
+ * [Jetbrains - Monitoring code coverage with karma](https://www.jetbrains.com/webstorm/help/monitoring-code-coverage-for-javascript.html)
+
+**What I learned**
+ * Use it as your IDE
+ * If use your webstorm as your IDE, use it as an IDE not just as a text-editor with sugar ... debug and run from It (thanks [lukebell](https://github.com/lukebell) ;))
+ * The coverage isn´t so clear to view, it's on the left bar (same of line numbers). Change the colors for a proper feedback.
