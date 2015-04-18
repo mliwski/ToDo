@@ -9,7 +9,7 @@ module.exports = function (config) {
             'src/libs/bower_components/ngstorage/ngStorage.js',
             'src/libs/utils/utils.js',
             'src/app.js',
-            'src/components/*/*Module.js',
+            'src/components/**/*Module.js',
             'src/components/**/*.js',
             'test/unit/**/*.js'
         ],

@@ -1,12 +1,25 @@
-(function(){
+(function() {
     'use strict';
+
+    /* Authentication Module Mock*/
+    angular.module('authenticationModule', [])
+        .factory('Token', [function(){
+            return {
+                get: function(){},
+                save: function(){},
+                delete: function(){}
+            };
+        }]);
+
 
     /* jasmine specs for lists controllers go here */
     describe('List Controller', function() {
         var scope = {};
         var listServiceMock = {get:function(){}};
 
-        beforeEach(module('todoApp'));
+        beforeEach(function(){
+            module('listModule');
+        });
 
         beforeEach(inject(function ($compile, $rootScope, $q) {
             scope = $rootScope.$new();
@@ -14,8 +27,7 @@
         }));
 
         it('Should startup lists with empty set', inject(function($controller) {
-            $controller('ListController', {$scope:scope});
-
+            $controller('ListController', {$scope:scope, List: listServiceMock});
             expect(scope.lists.length).toBe(0);
         }));
 

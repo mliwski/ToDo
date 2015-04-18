@@ -22,6 +22,7 @@ An also ... I hate the Gmail® interface for tasks and couldn't find any good To
  1. Sugar...
  
 ## Ideas/To solve
+ * Manage more than one account
  * How to handle sync
  * Config page
  * Chrome extension
