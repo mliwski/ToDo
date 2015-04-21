@@ -49,30 +49,22 @@
     /* jasmine specs for lists services go here */
     describe('List Service', function() {
         var scope = {};
-        var $httpBackend = {};
-        var List = {};
 
         beforeEach(function() {
             module('listModule');
 
-            inject(function ($injector, $rootScope) {
-                $httpBackend = $injector.get('' +
-                    '');
+            inject(function ($rootScope) {
                 scope = $rootScope.$new();
             });
-/*
-            inject(function (_List_) {
-                List = _List_;
-
-            });*/
         });
 
         it('Should startup lists with empty set', inject(function(List, $httpBackend) {
             $httpBackend.when('GET', 'http://base_uri/tasks/v1/users/@me/lists')
                 .respond({items:[{userId: 'userX'}, {'A-Token': 'xxx'}]});
-            //$httpBackend.expectGET('http://base_uri/tasks/v1/users/@me/lists');
 
-            List.get().then(function(response){console.log(response);});
+            List.get().then(function(items){
+                expect(items.length).toBe(2);
+            });
             $httpBackend.flush();
         }));
     });
