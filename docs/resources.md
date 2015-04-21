@@ -84,6 +84,7 @@ Karma js is a test runner. It runs your tests. Basically, you writing your tests
     * [Community info - Testing Promises in AngularJS](http://blog.xebia.com/2013/10/12/testing-promises-in-angularjs/)
     * [Community info - Mocking services](http://stackoverflow.com/questions/23705051/how-do-i-mock-a-service-that-returns-promise-in-angularjs-jasmine-unit-test) I found here the idea to use $q.when
     * [Community info - Mocking modules](http://stackoverflow.com/questions/17554727/mocking-angular-module-dependencies-in-jasmine-unit-tests)
+	* [Community info - HttpBackend use](http://ng-learn.org/2014/08/Testing_Promises_with_Jasmine)
  * If you split the application in modules/controllers/services/etc, in independent files, at the karma.conf.js you have to be careful of load the module.js before the rest of the files.
 
 ## Jasmine
