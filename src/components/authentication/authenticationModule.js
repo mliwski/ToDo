@@ -2,7 +2,7 @@
     'use strict';
 
     /* Authentication Module */
-    angular.module('authenticationModule', ['http-auth-interceptor'])
+    angular.module('authenticationModule', ['configModule', 'http-auth-interceptor'])
         .run(['$rootScope','$location', 'ParseService', 'Token', 'AuthenticationService', function($rootScope, $location, ParseService, Token, AuthenticationService) {
             $rootScope.$on('event:auth-loginRequired', function(/*event, data*/){
                 //Auto redirect to google authentication on Unauthorized

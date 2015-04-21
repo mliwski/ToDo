@@ -3,11 +3,12 @@
 
     /* Authentication Controllers */
     angular.module('authenticationModule')
-        .controller('AuthenticationController', ['$scope', 'AuthenticationService', function ($scope, AuthenticationService) {
+        .controller('AuthenticationController', ['$rootScope', '$scope', 'AuthenticationService', function ($rootScope, $scope, AuthenticationService) {
             $scope.authenticationLink = "";
 
             $scope.logout = function () {
                 AuthenticationService.logout();
+                $rootScope.loggedIn = false;
             };
 
             var init = function () {

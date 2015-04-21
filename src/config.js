@@ -1,0 +1,16 @@
+(function() {
+    'use strict';
+
+    /* App config*/
+    angular.module('configModule', [])
+        .constant('config', {
+            "googleapis": {
+                "base_uri": "https://www.googleapis.com",
+                "clientId": "364497781357-mdeekpgeb2bso2acdjs1oe0aa7tep448.apps.googleusercontent.com",
+                "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+                "redirect_uri": "http://localhost",
+                "scope": "email https://www.googleapis.com/auth/tasks",
+                "response_type": "token"
+            }
+        });
+})();

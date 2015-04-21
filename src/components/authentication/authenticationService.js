@@ -3,18 +3,16 @@
 
     /* Authentication Services */
     angular.module('authenticationModule')
-        .factory('AuthenticationService', ['$rootScope', '$window', 'Token', function($rootScope, $window, Token){
+        .factory('AuthenticationService', ['config', '$window', 'Token', function(config, $window, Token){
             var authenticationService = {
                 getAuthenticationLink: function() {
-                    var config = $rootScope.config.googleapis;
-                    return config.auth_uri + '?scope=' + config.scope + '&redirect_uri=' + config.redirect_uri + '&response_type=' + config.response_type + '&client_id=' + config.clientId;
+                    return config.googleapis.auth_uri + '?scope=' + config.googleapis.scope + '&redirect_uri=' + config.googleapis.redirect_uri + '&response_type=' + config.googleapis.response_type + '&client_id=' + config.googleapis.clientId;
                 },
                 login: function(){
                     $window.location.href = authenticationService.getAuthenticationLink();
                 },
                 logout: function() {
                     Token.delete();
-                    $rootScope.loggedIn = false;
                 }
             };
             return authenticationService;
