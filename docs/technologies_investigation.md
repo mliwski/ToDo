@@ -7,6 +7,8 @@ In this space will put all "technologies" (things/frameworks/apps/languages/stat
  * http://www.html5rocks.com/en/tutorials/tooling/supercharging-your-gruntfile/
  * https://github.com/stephenplusplus/grunt-wiredep
  * https://github.com/sapegin/grunt-bower-concat
+ * https://www.browserstack.com/
+ * https://github.com/karma-runner/karma-browserstack-launcher
  * https://saucelabs.com/opensauce/
  * http://www.hostingadvice.com/blog/where-to-find-free-node-js-hosting/
  * http://karma-runner.github.io/0.8/config/coverage.html
